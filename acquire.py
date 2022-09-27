@@ -51,3 +51,8 @@ def merge_df(url1,stores_url,item_url):
     merged_df=merged_df.rename(columns={'item':'item_id'})
     data = pd.merge(merged_df, item_df, how='left', on='item_id')
     return data
+
+
+def data():
+    data=pd.read_csv('https://raw.githubusercontent.com/jenfly/opsd/master/opsd_germany_daily.csv')
+    return data
